@@ -1,0 +1,51 @@
+
+<mat-toolbar color="warn">
+    <span>Home</span>
+    <span class="example-spacer"></span>
+    <button mat-button >Logout</button>
+</mat-toolbar>
+
+                  <div  [dragula]='"bag-task1"' class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%"  >
+                    <mat-card   class="card-picture" *ngFor="let picture of pictures; let i= index" (click)=" openDialogItem(picture)" >
+                      <mat-card-title   fxLayout.gt-xs="row" fxLayout.xs="column"  >
+                        <span fxFlex="80%">{{picture.title}} {{i}} </span>
+                        <mat-icon fxFlex="10%">mode_edit</mat-icon>
+                        <mat-icon fxFlex="10%">delete</mat-icon>
+                      </mat-card-title>
+                      <p *ngIf="picture.type==='todo'"> {{ picture.description }} </p>
+                      <img class="img" mat-card-image [src]=" picture.image" *ngIf="picture.type==='image'" >
+                      <mat-list   *ngFor="let list of picture.list ">
+                      <mat-list-item > {{list.todo}} </mat-list-item>
+                          
+                      </mat-list>
+                     
+                    </mat-card>
+                  </div>
+
+                  <button  mat-fab color="primary" class="app-fab--absolute" [matMenuTriggerFor]="menu">
+                      <i class="material-icons">queue</i>
+                  </button>
+                      <mat-menu #menu="matMenu"   class="menuuu">
+                        <button  class="display"  color="primary" mat-button (click)="openDialog()" >
+                          <i class="material-icons"  >list</i> List
+                      </button>
+                      <button  class="display"  color="primary" mat-button  >
+                        <i class="material-icons">photo</i>  Photo
+                      </button>
+                      <button  class="display" color="primary"  mat-button  >
+                          <i class="material-icons">input</i> Todo 
+                      </button>
+                   </mat-menu>
+                  
+                      
+
+      
+     
+  
+  
+
+
+
+
+
+

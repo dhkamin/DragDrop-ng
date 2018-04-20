@@ -1,0 +1,29 @@
+
+
+<h1 mat-dialog-title>
+    <input matInput placeholder="title todo" [(ngModel)]="title" >
+</h1>
+
+<div mat-dialog-content class="content" > 
+
+        <mat-selection-list #shoes>
+         <mat-list-option *ngFor="let listitem of listitems ">
+                        {{listitem.item}}
+                </mat-list-option>
+         </mat-selection-list>
+              
+        
+                            
+        <mat-form-field  class="example-full-width">
+                 <span matPrefix  color="warn"><i class="material-icons" >queue</i> &nbsp;&nbsp; &nbsp;</span>                       
+                 <input matInput placeholder="Description"   (change)="addinput(item)"  [(ngModel)]="item" required>
+
+        </mat-form-field> 
+       </div>  
+      
+<div mat-dialog-actions>
+    
+    <button mat-raised-button color="accent" (click)=" onNoClick()" >Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial (click)="confiraddlist()" >Confirm</button>
+ </div> 
+   

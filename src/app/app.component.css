@@ -1,0 +1,88 @@
+
+mat-toolbar{
+margin: 0  auto;
+width: 100%;
+}
+.example-spacer {
+  flex: 1 1 auto;
+  height: 10%;
+  width: 100%;
+
+}
+
+.img {
+  width:100%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+ 
+
+}
+.card-picture {
+  width: 13%;
+  margin-bottom: 2%;
+  
+
+
+}
+.container {
+  margin: 0 auto;
+  margin-top: 3%;
+  min-height: 50%;
+  width: 90%;
+}
+
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+
+
+
+ .menuuu{
+  bottom: 5rem;
+  position: fixed;
+  right: 5rem;
+  width: 5%;
+ } 
+.display{
+  display: block;
+  width: 100%;
+  
+}
+
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+
